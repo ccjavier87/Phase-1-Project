@@ -21,6 +21,7 @@ let joke = {
 
 //random joke happens when page is loaded
 //when random button is clicked/selected, run random joke function
-//
+//search for a joke when type in searchbar
+//search for a joke when search button selected
 
 joke.getJoke();
