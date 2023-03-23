@@ -1,7 +1,7 @@
 //'Accept', 'application/json'
 
 let joke = {
-    getJoke: function () {
+    getJoke: function (searchTerm) {
         fetch("https://icanhazdadjoke.com/search?term=" + searchTerm + "")
         .then((response) => response.json())
             .then((data) => console.log(data))
@@ -26,7 +26,11 @@ document.querySelector("#randomButton").addEventListener("click", function () {
 });
 
 //search for a joke when type in search bar
-//search for a joke when search button selected
+//search for a joke when search button clicked or tap or selected
+document.querySelector(".searchButton").addEventListener("click", function() {
+    joke.searchJoke();
+});
+
 //run random joke if search bar is empty
 
 joke.getJoke();
