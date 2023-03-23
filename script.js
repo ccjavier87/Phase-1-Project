@@ -2,7 +2,12 @@
 
 let joke = {
     getJoke: function (searchTerm) {
-        fetch("https://icanhazdadjoke.com/search?term=" + searchTerm + "")
+        fetch("https://icanhazdadjoke.com/search?term=" + searchTerm + "", {
+            headers: {
+                'Accept': 'application/json'
+            }
+        }
+)
         .then((response) => response.json())
             .then((data) => console.log(data))
 
