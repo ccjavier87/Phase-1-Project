@@ -1,21 +1,30 @@
 html {
+  /* Background image? */
   background: url(https://source.unsplash.com/random/?father+child) no-repeat center center fixed;
   background-size: cover;
+  /* End background image */
   height: 100%;
   overflow: hidden;
 }
 
+/* specify design of body of page */
 body {
   display: flex;
   justify-content: center;
   height: 100vh;
   margin: 0;
   align-items: center;
+  /* Fonts here */
   font-family: 'Open Sans', sans-serif;
   font-family: 'Permanent Marker', cursive;
   font-family: 'Gloria Hallelujah', cursive;
+  /* end of fonts */
     /* background: #fff; */
   /* background-image: url('https://source.unsplash.com/random/?dad&laughing');
   background-size: 100%; */
 
 }
+
+/* design of card or box or container */
+
+/* search section */
