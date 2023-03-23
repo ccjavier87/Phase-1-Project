@@ -55,6 +55,7 @@ form {
   align-items: center;
   width: calc(100% - 60px);
 }
+
 input.searchBar {
   border: none;
   outline: none;

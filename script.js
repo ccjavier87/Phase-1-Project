@@ -35,10 +35,16 @@ let joke = {
     },
 
     //search for a joke
-    searchJoke: function () { },
+    searchJoke: function () {
+        this.getJoke(document.querySelector(".searchBar").value);
+        document.querySelector(".form").reset();
+    },
 
     //display the joke searched
-    displayJoke: function () { }
+    displayJoke: function (data) {
+        const joke = data.joke;
+        document.querySelector(".theJoke").innerText = joke;
+    }
 
 };
 
@@ -53,7 +59,14 @@ document.querySelector("#randomButton").addEventListener("click", function () {
 document.querySelector(".searchButton").addEventListener("click", function () {
     joke.searchJoke();
 });
+//search for joke when press Enter key
+document.querySelector(".searchBar").addEventListener("keyup", function (e) {
+    if (e.key === "Enter") {
+        joke.searchJoke();
+       
+    }
+});
 
 //run random joke if search bar is empty
 
-joke.getJoke();
+joke.getRandom();
