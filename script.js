@@ -11,7 +11,12 @@ let joke = {
             .then((response) => response.json())
             //.then((data) => this.displayJoke(data))
             .then((data) => {
-                console.log(data.results)
+                //console.log(data.results)
+                let randNum = Math.floor(Math.random() * data.results.length);
+                //console.log("value", value)
+                //let resulted = Object.keys
+                //console.log (data.results[value].joke)
+                return this.displayJoke(data.results[randNum])
             })
 
     },
