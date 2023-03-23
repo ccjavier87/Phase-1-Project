@@ -22,7 +22,17 @@ let joke = {
     },
 
     //get a random joke (prefer when loading page)
-    getRandom: function () { },
+    getRandom: function () {
+        fetch("https://icanhazdadjoke.com/",
+        {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+            .then((response) => response.json())
+            .then((randJoke) => this.displayJoke(randJoke))
+            .catch((error) => console.log("error"))
+    },
 
     //search for a joke
     searchJoke: function () { },
