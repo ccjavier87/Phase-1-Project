@@ -9,7 +9,8 @@ let joke = {
         }
 )
         .then((response) => response.json())
-            .then((data) => console.log(data))
+        .then((data) => this.displayJoke(data))
+        
 
     },
 
