@@ -21,7 +21,12 @@ let joke = {
 
 //random joke happens when page is loaded
 //when random button is clicked/selected, run random joke function
-//search for a joke when type in searchbar
+document.querySelector("#randomButton").addEventListener("click", function () {
+    joke.getRandom();
+});
+
+//search for a joke when type in search bar
 //search for a joke when search button selected
+//run random joke if search bar is empty
 
 joke.getJoke();
