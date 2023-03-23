@@ -24,11 +24,11 @@ let joke = {
     //get a random joke (prefer when loading page)
     getRandom: function () {
         fetch("https://icanhazdadjoke.com/",
-        {
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
+            {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
             .then((response) => response.json())
             .then((randJoke) => this.displayJoke(randJoke))
             .catch((error) => console.log("error"))
@@ -37,7 +37,8 @@ let joke = {
     //search for a joke
     searchJoke: function () {
         this.getJoke(document.querySelector(".searchBar").value);
-        document.querySelector(".form").reset();
+        console.log(document.querySelector(".searchBar").value)
+        //document.querySelector("#form").reset();
     },
 
     //display the joke searched
@@ -63,7 +64,6 @@ document.querySelector(".searchButton").addEventListener("click", function () {
 document.querySelector(".searchBar").addEventListener("keyup", function (e) {
     if (e.key === "Enter") {
         joke.searchJoke();
-       
     }
 });
 
