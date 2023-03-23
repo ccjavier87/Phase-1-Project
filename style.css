@@ -84,3 +84,14 @@ input.searchBar {
 .jokes {
   font-family: 'Gloria Hallelujah';
 }
+
+.rand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#randomButton {
+  font-family: inherit;
+  font-size: 100%;
+}
