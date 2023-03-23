@@ -44,6 +44,30 @@ body {
   justify-content: center;
   align-items: center;
 }
+form {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 60px);
+}
+input.searchBar {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 0.4em;
+  background-color: #7c7c7c2b;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  width: 100%;
+  text-align: center;
+  /* align-items: center;
+  justify-content: center; */
+}
 
 
 /* search button */
