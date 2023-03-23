@@ -26,5 +26,26 @@ body {
 }
 
 /* design of card or box or container */
+.card {
+  background: #000000d0;
+  color: white;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 2em;
+  margin: 2em;
+  font-family: 'Permanent Marker', cursive;
+}
+
 
 /* search section */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* search button */
+
+/* section for joke display */
