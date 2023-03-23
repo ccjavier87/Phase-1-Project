@@ -7,21 +7,23 @@ let joke = {
                 'Accept': 'application/json'
             }
         }
-)
-        .then((response) => response.json())
-        .then((data) => this.displayJoke(data))
-        
+        )
+            .then((response) => response.json())
+            //.then((data) => this.displayJoke(data))
+            .then((data) => {
+                console.log(data.results)
+            })
 
     },
 
     //get a random joke (prefer when loading page)
-    getRandom: function () {},
+    getRandom: function () { },
 
     //search for a joke
-    searchJoke: function () {},
+    searchJoke: function () { },
 
     //display the joke searched
-    displayJoke: function () {}
+    displayJoke: function () { }
 
 };
 
@@ -33,7 +35,7 @@ document.querySelector("#randomButton").addEventListener("click", function () {
 
 //search for a joke when type in search bar
 //search for a joke when search button clicked or tap or selected
-document.querySelector(".searchButton").addEventListener("click", function() {
+document.querySelector(".searchButton").addEventListener("click", function () {
     joke.searchJoke();
 });
 
