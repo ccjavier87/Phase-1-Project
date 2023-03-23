@@ -48,4 +48,12 @@ body {
 
 /* search button */
 
+.searchButton {
+  height: 36px;
+  width: 36px;
+  border-radius: 18px;
+  margin: 0.5em;
+}
+
+
 /* section for joke display */
