@@ -19,4 +19,8 @@ let joke = {
 
 };
 
+//random joke happens when page is loaded
+//when random button is clicked/selected, run random joke function
+//
+
 joke.getJoke();
