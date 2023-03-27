@@ -1,56 +1,14 @@
 //'Accept', 'application/json'
 
-
-let jokeBox = [];
-
-let page = 1;
-
 let joke = {
-
-    allJokes: function (page) {
-        let searchTerm = "&page=" + page;
-        this.getData(searchTerm)
-        .then ((response) => response.json()) //end 1st then
-        .then((data) => {
-           //console.log(data.results)
-          if (data.current_page <= data.total_pages) 
-            {
-              let jokeMap = data.results.map((jokes) => jokes.joke)
-              for (let item of jokeMap) 
-                {
-                  jokeBox.push(item)
-                //   console.log(item)
-                //   console.log(jokeBox)
-                }//end loop
-              this.allJokes (page + 1)
-            }//end if condition
-        })//end 2nd then
-    },//end allJokes function
-
-    filterJokes: function (searchTerm) {
-        joke.allJokes(1)
-        let filtered = jokeBox.filter(item => item.includes(`${searchTerm}`));
-        console.log(typeof filtered)
-        filtered.forEach((e) => {
-            const newP = document.createElement("p");
-            newP.innerText = e;
-            document.querySelector(".jokeList").appendChild(newP)
-        })
-        
-    },
-
-    getData: function (searchTerm) {
-        return fetch("https://icanhazdadjoke.com/search?term=" + searchTerm + ""
+    getJoke: function (searchTerm) {
+        fetch("https://icanhazdadjoke.com/search?term=" + searchTerm + ""
         , {
             headers: {
                 'Accept': 'application/json'
-            } //end of header
-        }) //end of fetch
-    },
-
-    getJoke: function (searchTerm) {
-        this.getData(searchTerm)
-        .then((response) => response.json())
+            }
+        })
+            .then((response) => response.json())
             //.then((data) => this.displayJoke(data))
             .then((data) => {
                 //console.log(data.results)
@@ -61,9 +19,7 @@ let joke = {
                 return this.displayJoke(data.results[randNum])
                
             })
-               
-            },
-    
+    },
 
     //get a random joke (prefer when loading page)
     getRandom: function () {
@@ -82,7 +38,6 @@ let joke = {
     searchJoke: function () {
         
         this.getJoke(document.querySelector(".searchBar").value);
-        this.filterJokes(document.querySelector(".searchBar").value);
         document.querySelector(".searchBar").value = "";
         //document.querySelector("form").reset();
         // e.preventDefault();
@@ -94,8 +49,6 @@ let joke = {
         const joke = data.joke;
         document.querySelector(".theJoke").innerText = joke;
     }
-
-
 };
 
 //random joke happens when page is loaded
@@ -144,10 +97,10 @@ document.querySelector(".searchBar").addEventListener("keyup", function (e) {
 //     //document.querySelector(".searchButton").click();
     // joke.searchJoke();
     if (e.key === "Enter") {
-        e.preventDefault()
+        //e.preventDefault()
         document.querySelector(".searchButton").click();
         //document.querySelector("#form").reset();
-        //joke.searchJoke()
+        
     }
 });
 
