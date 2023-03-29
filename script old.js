@@ -77,7 +77,9 @@ searchButt.addEventListener("click", function() {
     joke.searchJoke();
 
     //run random joke if search bar is empty
-///... if (document.querySelector(".searchBar").value === null)
+if (document.querySelector(".searchBar").value === null || "") {
+    joke.getRandom();
+}
 });
 
 //change search button to solid when mouse over

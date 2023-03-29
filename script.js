@@ -30,8 +30,10 @@ let joke = {
     filterJokes: function (searchTerm) {
         joke.allJokes(1)
         let filtered = jokeBox.filter(item => item.includes(`${searchTerm}`));
-        console.log(typeof filtered)
+        //console.log(typeof filtered)
+        document.querySelector(".jokeList").innerHTML = '';
         filtered.forEach((e) => {
+            document.querySelector(".jokeList").innerHTML = "";
             const newP = document.createElement("p");
             newP.innerText = e;
             document.querySelector(".jokeList").appendChild(newP)
@@ -124,8 +126,9 @@ searchButt.addEventListener("click", function() {
     joke.searchJoke();
 
     //run random joke if search bar is empty
-///... if (document.querySelector(".searchBar").value === null)
-});
+    if (document.querySelector(".searchBar").value === null || "") {
+        joke.getRandom();
+    }});
 
 //change search button to solid when mouse over
 searchButt.addEventListener("mouseover", function () {
@@ -140,7 +143,7 @@ searchButt.addEventListener("mouseout", function () {
 //search for joke when press Enter key
 //document.querySelector("form").addEventListener("submit", function (e) {
 document.querySelector(".searchBar").addEventListener("keyup", function (e) {
-    e.preventDefault();
+    // e.preventDefault();
 //     //document.querySelector(".searchButton").click();
     // joke.searchJoke();
     if (e.key === "Enter") {

@@ -9,11 +9,12 @@ html {
 
 /* specify design of body of page */
 body {
-  display: center;
+  display: flex;
   justify-content: center;
   height: 100vh;
   margin: 0;
   align-items: center;
+  align-content: center;
   /* Fonts here */
   font-family: 'Open Sans', sans-serif;
   font-family: 'Permanent Marker', cursive;
@@ -35,6 +36,8 @@ body {
   padding: 2em;
   margin: 2em;
   font-family: 'Permanent Marker', cursive;
+  align-content: center;
+
 }
 
 
