@@ -1,4 +1,3 @@
-<!-- ///GET: https://ichanhazdadjoke.com/ -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,21 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 1 Project</title>
 
-    <!--START FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Open+Sans&family=Permanent+Marker&display=swap"
         rel="stylesheet">
-    <!--END FONT-->
 
-    <!--STYLE-->
     <link rel="stylesheet" href="./style.css">
-    <!--END OF STYLE-->
 
-    <!--JS SCRIPT-->
     <script src="./script.js" defer></script>
-    <!--END OF JS SCRIPT-->
 
 </head>
 
@@ -31,58 +24,20 @@
     <div class="card">
         <h1 id="whatAbout">Search Joke about...</h1>
         <div class="search">
-            <!-- <form> -->
-            <input type="text" class="searchBar">
-            <!-- </form> -->
-            <button class="searchButton">
-                <!-- Insert search Icon -->
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
-                    width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z">
-                    </path>
-                    <path
-                        d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z">
-                    </path>
-                </svg>
-            </button>
-
+            <input type="text" id="searchBar" class="searchBar">
+            <button class="searchButton">&#128269;</button>
         </div>
         <div class="rand">
-            <button id="randomButton">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 496 512" height="1em"
-                    width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm33.8 161.7l80-48c11.6-6.9 24 7.7 15.4 18L343.6 180l33.6 40.3c8.7 10.4-3.9 24.8-15.4 18l-80-48c-7.7-4.7-7.7-15.9 0-20.6zm-163-30c-8.6-10.3 3.8-24.9 15.4-18l80 48c7.8 4.7 7.8 15.9 0 20.6l-80 48c-11.5 6.8-24-7.6-15.4-18l33.6-40.3-33.6-40.3zM398.9 306C390 377 329.4 432 256 432h-16c-73.4 0-134-55-142.9-126-1.2-9.5 6.3-18 15.9-18h270c9.6 0 17.1 8.4 15.9 18z">
-                    </path>
-                </svg>
-            </button>
+            <button id="randomButton">&#128512;</button>
         </div>
         <div class="jokes">
             <h2 class="theJoke">Here comes the Joke...</h2>
-            <div class="jokeList" >
-                <h4>All Jokes with searched topic</h4>
-                
+            <div class="jokeListContainer" >
+                <h4>All Jokes with searched topic:</h4>
+                <ul class="jokeList"></ul>
             </div>
         </div>
-        
-        <div class="part2"></div>
-
     </div>
-    <!-- <section class="favoriteList">
-        <h2>Favorites</h2>
-        <div id="favorites">
-            <div class="favoriteJoke">
-                <div class="favoriteContent">
-                    <input type="text" class="favoriteText" value="A Saved Joke" />
-                </div>
-                <div class="favButtons">
-                    <button class="delete">Delete</button>
-                </div>
-            </div>
-        </div>
-
-    </section> -->
 </body>
 
 </html>
